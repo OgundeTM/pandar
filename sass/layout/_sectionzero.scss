@@ -1,0 +1,244 @@
+.content-0-box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    // background-color: red;
+    z-index: 4;
+    // position: fixed;
+
+    .scroll-down {
+        // height: 40rem;
+        width: 25rem;
+        // background-color: red;
+        position: fixed;
+        left: 0;
+        z-index: 20;
+        
+        svg {
+            float: left;
+        }
+    }
+}
+
+.content-0 {
+    height: 85%;
+    width: 100%;
+    padding: 3% 13%;
+    display: flex;
+    align-items: center;
+    // background-color: whitesmoke;
+    // position: relative;
+    position: fixed;
+    // bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 3%);
+
+    .quicksell-text {
+        background-color: $color-yellow;
+        border-radius: 1000px 0 0 1000px;
+        padding: 6% 5% 6% 14%;
+        color: $color-red;
+        
+        @media screen and (max-width: 1200px) {
+            width: 100%;            
+        }
+
+        &-heading {
+            @include fluid-type($min_width-btcHead-desk, $max_width-btcHead-desk, $min_font-btcHead-desk, $max_font-btcHead-desk);
+            font-weight: $font-xbold;
+            margin-bottom: 2%;
+        }
+
+        &-content {
+            @include fluid-type($min_width-content-text-desk, $max_width-content-text-desk, $min_font-content-text-desk, $max_font-content-text-desk);
+            margin-bottom: 1.5%;
+            font-weight: $font-light;
+        }
+
+        .quicksell-icon-box {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 5%;
+            height: 4rem;
+
+            @media screen and (max-width: 1420px) {
+                height: 3.2rem;
+            }
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    .quicksell-form {
+        background-color: $color-grey-light;
+        width: 100%;
+        height: 90%;
+        box-shadow: 0 6px 12px rgba($color: #000000, $alpha: .15);
+        border-radius: 8px;
+        padding: 6% 3% 1% 3%;
+
+        @media screen and (max-width: 1200px) {
+            height: 75%;
+        }
+
+        @media screen and (max-height: 840px) {
+            height: 95%;
+        }
+        @media screen and (max-height: 800px) {
+            height: 100%;
+        }
+
+        &-heading {
+            @include fluid-type($min_width-formHead-desk, $max_width-formHead-desk, $min_font-formHead-desk, $max_font-formHead-desk);
+            color: $color-red;
+            text-align: center;
+            margin-bottom: 4%;
+            font-weight: $font-xbold;
+        }
+
+        .quicksell-rate {
+            text-align: center;
+            margin-bottom: 4%;
+
+            .below,
+            .above {
+                @include fluid-type($min_width-formSub-desk, $max_width-formSub-desk, $min_font-formSub-desk, $max_font-formSub-desk);
+                color: $color-black;
+            }
+            
+            .below {
+                font-weight: $font-light;
+                margin-bottom: 1%;                
+            }
+
+            .above {
+                font-weight: $font-bold;
+            }
+        }
+
+        &-sub-box {
+            padding: 0 4%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3%;
+            
+
+            .quicksell-form-sub {
+                @include fluid-type($min_width-formSub-desk, $max_width-formSub-desk, $min_font-formSub-desk, $max_font-formSub-desk);
+                font-weight: $font-light;
+                color: $color-black;
+
+                span {
+                    font-weight: $font-regular;
+                    color: $color-red;
+                }
+            }
+        }
+
+        .form {
+            width: 100%;
+            height: 100%;
+            
+
+            &_input {
+                position: relative;
+                height: 15%;
+                margin-bottom: 4%;
+                @include fluid-type($min_width-formDefault-desk, $max_width-formDefault-desk, $min_font-formDefault-desk, $max_font-formDefault-desk);
+
+                @media screen and (max-width: 1200px) {
+                    height: 15%;
+                    margin-bottom: 6%;
+                }
+
+                label {
+                    position: absolute;
+                    right: 5%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: $color-grey;
+                    text-transform: uppercase;
+                    font-weight: $font-medium;
+                }
+
+                input {
+                    height: 100%;
+                    width: 100%;
+                    border: none;
+                    border-radius: 8px;
+                    padding: 0 5%;
+                    padding-right: 30%;
+                    @include fluid-type($min_width-formDefault-desk, $max_width-formDefault-desk, $min_font-formDefault-desk, $max_font-formDefault-desk);
+                    font-weight: $font-bold;
+                    background-color: $color-white;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+            }
+
+            .receive {
+                @include fluid-type($min_width-formSub-desk, $max_width-formSub-desk, $min_font-formSub-desk, $max_font-formSub-desk);
+                font-weight: $font-light;
+                color: $color-black;
+                padding-right: 4%;
+                text-align: right;
+                margin-bottom: 8%;
+            }
+
+            .form_btn {
+                width: 100%;
+                height: 12%;
+                border: none;
+                border-radius: 8px;
+                @include fluid-type($min_width-formSub-desk, $max_width-formSub-desk, $min_font-formSub-desk, $max_font-formSub-desk);
+                font-weight: bold;
+                color: $color-white;
+                background-color: $color-black;
+                margin-bottom: 2%;
+
+                @media screen and (max-width: 1200px) {
+                    height: 12%;
+                }
+            }
+
+            &_text {
+                text-align: center;
+                @include fluid-type($min_width-formSub-desk, $max_width-formSub-desk, $min_font-formSub-desk, $max_font-formSub-desk);
+                font-weight: $font-light;
+                color: $color-black;
+                
+                span {
+                    display: inline-block;
+                    transform: translateY(20%);
+                    width: 2rem;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+    MOBILE VIEW
+*/

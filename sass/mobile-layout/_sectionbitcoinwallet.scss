@@ -1,0 +1,70 @@
+.section__bitcoinwallet {
+    width: 100%;
+    background-color: $color-yellow-bright;
+    overflow: hidden;
+
+    @media screen and (max-height: 820px) {
+        height: 100vh;
+    }
+    @media screen and (max-height: 720px) {
+        height: 720px;
+    }
+    @media screen and (min-height: 821px) {
+        height: 820px;
+    }
+
+    &-content {
+        // width: 85%;
+        margin: 0 auto;
+
+        &-empty {
+            width: 100%;
+            height: 17vh;
+        }
+
+        &-heading-box {
+            padding: 1.8em 4em;
+            background-color: rgba($color: $color-orange, $alpha: .25);
+
+            .bitcoinwallet-heading {
+                color: $color-red;
+            }
+        }
+
+        .content-bitcoinwallet {
+            color: #3A3434;
+        }
+
+        .bitcoinwallet-image {
+            width: 100%;
+            
+            .lightning {
+                display: block;
+                margin-left: auto;
+                width: 4rem;
+                animation: rotate 1.5s ease-in-out infinite;
+                // animation: rotate 1.5s ease-in-out infinite;
+            }
+
+            &-phone-box {
+                width: 70%;
+                margin: 0 auto;
+                position: relative;
+                z-index: 20;
+            }
+
+            &-background {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+
+            &-phone {
+                width: 100%;
+                filter: drop-shadow(-36px 16px 3rem rgba(0, 0, 0, 0.2));
+            }
+        }
+    }
+}

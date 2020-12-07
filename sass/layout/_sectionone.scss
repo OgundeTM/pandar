@@ -1,0 +1,177 @@
+.section-indicator-box {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 8.5%;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+
+    & > *:not(:last-child) {
+        margin-right: .9rem;
+    }
+
+    .one,
+    .two,
+    .three,
+    .four,
+    .five {
+        display: block;
+        height: 1rem;
+        width: 1rem;
+        background-color: $color-orange;
+        border-radius: 100px;
+        transition: background-color .5s ease-out forwards;
+    }
+    
+    .active {
+        height: 1.3rem;
+        width: 1.3rem;
+        background-color: $color-yellow-bright;
+        border: 3px solid $color-yellow;        
+    }
+}
+
+.content-1-box {
+    height: 100%;
+    width: 100%;
+    // background-color: red;
+    display: flex;
+    align-items: flex-end;
+    // position: relative;
+    
+}
+
+.content-1 {
+    width: 100%;
+    // background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: absolute;
+    top: 55%;    
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    // opacity: 0;
+    // visibility: hidden;
+
+    .text-box {
+        margin: 0;
+        
+    
+        .heading-lg {
+            text-align: center;
+            font-weight: $font-xbold;
+            margin-bottom: 1rem;
+            @include fluid-type($min_width-heading-desk, $max_width-heading-desk, $min_font-heading-desk, $max_font-heading-desk);
+    
+            span {
+                color: $color-red;
+            }
+        }
+    
+        .sub-heading {
+            @include fluid-type($min_width-sub-desk, $max_width-sub-desk, $min_font-sub-desk, $max_font-sub-desk);
+            color: $color-red;
+            text-align: center;
+            // font-weight: normal;
+            margin-bottom: 7%;
+
+            @media screen and (max-height: 850px) {
+                margin-bottom: 4%;
+            }
+        }
+    }
+
+    &-main {
+        height: 50vh;
+        // background-color: white;
+        z-index: 3;
+        position: relative;
+
+        // @media screen and (max-width: 1920px) {
+        //     width: 55rem;
+        // }
+        // @media screen and (max-width: 1100px) {
+        //     width: 65rem;
+        // }
+        @media screen and (max-height: 800px) {
+            height: 45vh;            
+        }
+
+        .anim1 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            // background-color: white;
+            z-index: -1;
+        }
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include fluid-type($min_width, $max_width, $min_font, $max_font);
+            text-transform: uppercase;
+            color: $color-orange;
+            opacity: .17;
+            letter-spacing: -20px;
+            z-index: -1;
+            font-weight: 300;
+        }
+
+        img {
+            // width: 100%;
+            height: 100%;
+            z-index: 2;            
+        }
+    }
+
+    .partners-box {
+        height: 12rem;
+        width: 60%;
+        padding: 0 1%;
+        background-color: $color-logo-box;
+        border-radius: 100px;
+        transform: translateY(-2rem);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @media screen and (max-width: 1200px) {
+            height: 10rem;
+            width: 75%;
+        }
+        @media screen and (max-width: 1000px) {
+            height: 9rem;
+            width: 85%;
+        }
+        @media screen and (max-width: 900px) {
+            height: 9rem;
+            width: 90%;
+        }
+
+        @media screen and (max-height: 850px) {
+            height: 9.5rem;
+        }
+
+        img {
+            width: 12%;
+            object-fit: cover;
+        }
+    }
+}
+
+.section-1-fade {
+    animation: sectionFadeOut .5s ease-out forwards;
+    animation-delay: .8s;
+}
+
+.section-1-fadeIn {
+    // animation-delay: .8s;
+    animation: sectionFadeIn 2.5s ease-out forwards;
+}

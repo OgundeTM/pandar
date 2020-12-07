@@ -1,0 +1,121 @@
+.section__wallet {
+    width: 100%;
+    // height: 100%;
+    background-color: $color-yellow-bright;
+    overflow: hidden;
+    
+    @media screen and (max-height: 820px) {
+        height: 100vh;
+    }
+    @media screen and (max-height: 720px) {
+        height: 720px;
+    }
+    @media screen and (min-height: 821px) {
+        height: 820px;
+    }
+
+
+
+    &-content {
+        // width: 90%;
+        margin: 0 auto;
+
+        @media screen and (min-width: 430px) {
+            // width: 80%;
+        }
+
+        &-empty {
+            height: 20vh;
+            width: 100%;
+        }
+
+        &-heading-box {
+            background-color: rgba($color: $color-line, $alpha: .25);
+            
+            .wallet-heading {
+                color: $color-dark-blue;
+
+                span {
+                    color: $color-red;
+                }
+            }
+        }
+
+        &-subheading {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+            color: $color-red;
+        }
+
+        &-box {
+            margin: 0 auto;
+            margin-top: 18%;
+            width: 100%;
+            height: 30rem;
+            background-color: rgba($color: $color-box, $alpha: .19);
+            border-radius: 3rem;
+            padding: 12% 14%;
+            margin-bottom: 20%;
+
+            @media screen and (min-width: 500px) {
+                margin-top: 12%;
+            }
+            @media screen and (min-width: 540px) {
+                width: 90%;
+            }
+            @media screen and (min-width: 585px) {
+                padding: 10% 12%;
+                width: 85%;
+            }
+            @media screen and (min-width: 650px) {
+                width: 80%;
+            }
+            @media screen and (min-width: 740px) {
+                padding: 8% 10%;
+                width: 75%;
+            }
+            @media screen and (min-width: 815px) {
+                padding: 7% 9%;
+            }
+
+            .wallet-store {
+                height: 5rem;
+                width: 100%;
+                margin-bottom: 10%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                & > * {
+                    width: 49%;
+
+                    svg {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .wallet-image {
+                width: 100%;
+                position: relative;
+                z-index: 1;
+
+                &-phone {
+                    width: 100%;
+                    filter: drop-shadow(-36px 16px 3rem rgba(0, 0, 0, 0.2));
+                }
+
+                &-background {
+                    position: absolute;
+                    width: 125%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                }
+            }
+        }
+
+    }
+}

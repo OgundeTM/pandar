@@ -1,0 +1,38 @@
+.content-5-box{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    // background-color: red;
+}
+
+.content-5 {
+    z-index: 2;
+    height: 85%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: white;
+
+    &-card-box {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 50%;
+
+        .master-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 90%;
+            z-index: -1;
+        }
+
+        .mastercard {
+            height: 100%;
+        }
+    }
+}

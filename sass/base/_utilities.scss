@@ -1,0 +1,89 @@
+// TEXT
+.heading {
+    color: $color-white;
+    @include fluid-type($min_width-content-heading-desk, $max_width-content-heading-desk, $min_font-content-heading-desk, $max_font-content-heading-desk);
+    text-transform: capitalize;
+    margin-bottom: 3%;
+    font-weight: $font-xbold;
+    // font-weight: bolder;
+
+    span {
+        display: inline-block;
+        transform: translateY(1rem);
+        height: 6rem;
+        width: 6rem;
+
+        @media screen and (max-width: 1300px) {
+            height: 5rem;
+            width: 5rem;
+        }
+
+        @media screen and (max-width: 1000px) {
+            height: 4rem;
+            width: 4rem;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.content-text {
+    color: #5D5D5D;
+    @include fluid-type($min_width-content-text-desk, $max_width-content-text-desk, $min_font-content-text-desk, $max_font-content-text-desk);
+    margin-bottom: 3%;
+    font-weight: $font-medium;
+    line-height: 2.5rem;
+
+    @media screen and (max-width: 1090px) {
+        line-height: 2rem;
+    }
+
+    @media screen and (max-height: 900px) {
+        line-height: 2rem;
+    }
+}
+
+
+/*
+    MOBILE
+*/
+.heading-mobile {
+    @include fluid-type($min_width-heading-mobile, $max_width-heading-mobile, $min_font-heading-mobile, $max_font-heading-mobile);
+    text-transform: capitalize;
+    font-weight: $font-xbold;
+    position: relative;
+
+    .heading-icon {
+        position: relative;
+        display: inline-block;
+        height: 2.5rem;
+        transform: translateY(.5rem);
+        
+        img {
+            height: 100%;
+        }
+    }
+}
+
+.heading-box {
+    width: max-content;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 100px;
+    padding: 2.5em 3em;
+    margin-bottom: 5%;
+}
+
+.content-mobile {
+    @include fluid-type($min_width-contentText-mobile, $max_width-contentText-mobile, $min_font-contentText-mobile, $max_font-contentText-mobile);
+    margin-bottom: 2.2vh;
+    line-height: 20px;
+    font-weight: $font-medium;
+}
+
+.margin {
+    margin-bottom: 4vh;
+}

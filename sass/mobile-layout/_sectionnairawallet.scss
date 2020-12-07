@@ -1,0 +1,80 @@
+.section__nairawallet {
+    background-color: $color-orange;
+    overflow: hidden;
+
+    @media screen and (max-height: 820px) {
+        height: 100vh;
+    }
+    @media screen and (max-height: 720px) {
+        height: 720px;
+    }
+    @media screen and (min-height: 821px) {
+        height: 820px;
+    }
+
+    &-content {
+        // width: 90%;
+        margin: 0 auto;
+
+        &-empty {
+            height: 17vh;
+            width: 100%;
+        }
+
+        &-heading-box {
+            background-color: rgba($color: $color-yellow, $alpha: .25);
+            padding: 1.8em 4em;
+
+            .nairawallet-heading {
+                color: #fff;
+            }
+        }
+
+        .content-nairawallet {
+            color: #fff;
+        }
+
+        .gutter {
+            display: inline-block;
+            height: 2px;
+            width: 100%;
+            background-color:$color-line;
+            margin-bottom: 5%;
+        }
+
+        .btn-mobile {
+            @include fluid-type($min_width-btn-mobile, $max_width-btn-mobile, $min_font-btn-mobile, $max_font-btn-mobile);
+            font-weight: $font-bold;
+            display: block;
+            margin: 0 auto;
+            padding: 1.2em 2.5em;
+            border-radius: 100px;
+            border: none;
+            text-transform: capitalize;
+            color: #fff;
+            background-color: $color-line;
+            margin-bottom: 5%;
+        }
+
+        .nairawallet-image {
+            width: 70%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 20;
+
+            &-phone {
+                width: 100%;
+                filter: drop-shadow(-36px 16px 3rem rgba(0, 0, 0, 0.2));
+            }
+
+            &-background {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 120%;
+                z-index: -1;
+            }
+        }
+    }
+}

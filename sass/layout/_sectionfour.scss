@@ -1,0 +1,131 @@
+.content-4-box {
+    height: 100%;
+    width: 100%;
+    // background-color: red;
+    display: flex;
+    align-items: flex-end;
+    // opacity: 0;
+    z-index: 30;
+
+    @media screen and (max-width: 1400px) {
+        padding-bottom: 1%;
+    }
+    @media screen and (max-width: 1200px) {
+        padding-bottom: 2%;
+    }
+    @media screen and (max-width: 1090px) {
+        padding-bottom: 8%;
+    }
+    @media screen and (max-width: 950px) {
+        padding-bottom: 15%;
+    }
+    @media screen and (max-width: 830px) {
+        padding-bottom: 20%;
+    }
+}
+
+.content-4 {
+    height: 90%;
+    width: 100%;
+    // background-color: white;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1600px) {
+        height: 85%;
+    }
+
+    @media screen and (max-width: 1200px) {
+        height: 82%;
+    }
+
+    @media screen and (max-width: 1090px) {
+        height: 75%;
+    }
+
+    @media screen and (max-width: 950px) {
+        height: 70%;
+    }
+
+    @media screen and (max-width: 830px) {
+        height: 65%;
+    }
+
+    .img-box-4 {    
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        z-index: 4;
+
+        img {
+            height: 100%;
+            filter: drop-shadow(-36px 16px 3rem rgba(0, 0, 0, 0.2));
+            z-index: 4;
+        }
+    }
+
+    .centered-box-4 {
+        align-self: center;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .text-box-4 {
+        text-align: right;
+        width: 30%;
+
+        .line {
+            display: inline-block;
+            height: 3px;
+            width: 80%;
+            background-color: $color-line;
+            margin-bottom: 4%;
+            border-radius: 100px;
+        }
+    }
+
+    .right-4 {
+        text-align: right;
+        // margin-top: 5%;
+        margin-left: 2%;
+        margin-bottom: 22px;
+
+        @media screen and (max-width: 1400px) {      
+            margin-left: 0;
+        }
+    }
+
+    .left-4 {
+        text-align: left;
+        align-self: flex-end;
+        margin-right: 5%;
+
+        @media screen and (max-width: 1400px) {        
+            margin-right: 2.5%;
+        }
+
+        .heading {
+
+            span {
+                width: 5.5rem;
+            }
+        }
+    }
+}
+
+.textAnimLeft4 {
+    transform: translateX(-100%);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.textAnimRight4 {
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+}

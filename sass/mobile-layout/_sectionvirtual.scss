@@ -1,0 +1,101 @@
+.section__virtual {
+    width: 100%;
+    background-color: $color-yellow-bright;
+    overflow: hidden;
+
+    @media screen and (max-height: 820px) {
+        height: 100vh;
+    }
+    @media screen and (max-height: 720px) {
+        height: 720px;
+    }
+    @media screen and (min-height: 821px) {
+        height: 820px;
+    }
+
+    &-content {
+        // width: 85%;
+        margin: 0 auto;
+
+        .content-virtual {
+            color: $color-blue;
+        }
+
+        &-empty {
+            width: 100%;
+            height: 19vh;
+        }
+
+        &-heading-box {
+            padding: 1.8em 4em;
+            background-color: rgba($color: $color-orange, $alpha: .25);
+
+            .virtual-heading {
+                color: $color-red;
+            }
+        }
+
+        .virtual-image {
+            margin-top: 22%;
+            width: 100%;
+            position: relative;
+            // background-color: blue;
+            z-index: 20;
+
+            .dollarsign {
+                float: right;
+                width: 4rem;
+                animation: rotate 1.5s ease-in-out infinite;
+            }
+
+            &-background {
+                // position: absolute;
+                // top: 50%;
+                // left: 0;
+                // transform: translateY(-50%);
+                // position: absolute;
+                width: 100%;
+                z-index: 1;
+            }
+
+            &-phone-box {
+                width: 80%;
+                position: absolute;
+                right: 0;
+                top: 12%;
+                z-index: 20;
+                // background-color: red;
+
+                .virtual-image-card {
+                    width: 70%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: rotate(0deg);
+                }
+        
+                .virtual-image-phone {
+                    // position: absolute;
+                    // right: 0;
+                    width: 100%;
+                    filter: drop-shadow(-36px 16px 3rem rgba(0, 0, 0, 0.2));
+                }
+            }
+
+            
+
+            
+
+            
+        }
+    }
+}
+
+
+.popCardOut {
+    animation: popOut .8s cubic-bezier(0.68, -0.55, 0.565, 1.55) forwards;
+}
+
+.popCardIn {
+    animation: popIn .8s cubic-bezier(0.68, -0.55, 0.565, 1.55) forwards;
+}

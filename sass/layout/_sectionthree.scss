@@ -1,0 +1,44 @@
+.content-3 {
+
+    &-card-box {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(.8);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2;
+        height: 62%;
+
+        @media screen and (max-width: 1200px) {
+            height: 60%;
+        }
+        @media screen and (max-width: 950px) {
+            height: 50%;
+        }
+        @media screen and (max-height: 880px) {
+            height: 60%;
+        }
+        
+        .nikecard {
+            height: 100%;
+        }
+        
+        .nike-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            z-index: -1;
+        }
+    }
+}
+
+.scale-up {
+    animation: scaleUp 1s ease-out forwards;
+}
+
+.scale-down {
+    animation: scaleDown 1s ease-out forwards;
+}
